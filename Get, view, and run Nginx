@@ -1,0 +1,13 @@
+docker pull nginx
+docker images
+docker run --name nginx -p 8081:80 -d nginx
+docker ps
+<public_ip_address>:8081
+docker stop nginx
+docker rm nginx
+docker ps -a
+docker run --name nginx -v $(pwd):/usr/share/nginx/html:ro -p 8081:80 -d nginx
+<public_ip_address>:8081
+docker stop nginx
+docker rm nginx
+docker ps -a
